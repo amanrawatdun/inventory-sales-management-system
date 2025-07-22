@@ -17,7 +17,7 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://inventory-frontend-xyz.onrender.com', 
+  origin: 'https://inventory-pro-qdxu.onrender.com', 
   credentials: true
 }));
 app.use(express.json());
