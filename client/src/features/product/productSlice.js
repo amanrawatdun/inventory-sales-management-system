@@ -71,22 +71,40 @@ const productSlice = createSlice({
                 state.loading = false;
                 state.error = action.payload;
             })
+            .addCase(createProduct.pending , (state)=>{
+                state.loading=true;
+                state.error=null;
+            })
             .addCase(createProduct.fulfilled, (state, action) => {
+                state.loading=false;
                 state.products.push(action.payload);
             })
+            .addCase(createProduct.rejected, (state, action) => {
+                state.loading=false;
+                state.error=action.payload;
+            })
+            .addCase(deleteProduct.pending, (state) => {
+                state.loading=true;
+                state.error=null;
+            })
             .addCase(deleteProduct.fulfilled, (state, action) => {
+                state.loading=false;
                 state.products = state.products.filter(p => p._id !== action.payload);
+            })
+            .addCase(deleteProduct.rejected, (state, action) => {
+                state.loading=false;
+                state.error=action.payload;
             })
             .addCase(updateProduct.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
             .addCase(updateProduct.fulfilled, (state, action) => {
+                state.loading=false;
                 const index = state.products.findIndex(p => p._id === action.payload._id);
                 if (index !== -1) {
                     state.products[index] = action.payload;
                 }
-                state.loading=false;
             })
             .addCase(updateProduct.rejected, (state, action) => {
                 state.loading = false;

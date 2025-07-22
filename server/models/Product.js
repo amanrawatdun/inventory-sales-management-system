@@ -7,6 +7,7 @@ const productSchema = new mongoose.Schema({
   stock: Number,
   category: String,
   image: String, 
+  imagePublicId: String,
   createdBy:{
     type:mongoose.Schema.Types.ObjectId,
     ref:'Admin',

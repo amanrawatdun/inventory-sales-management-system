@@ -137,7 +137,7 @@ const Products = () => {
                 <div className="relative">
                   {p.image ? (
                     <img
-                      src={`${imgurl}${p.image}`}
+                      src={p.image}
                       alt={p.name}
                       className="w-full h-48 object-cover transition duration-300 transform hover:scale-105"
                     />

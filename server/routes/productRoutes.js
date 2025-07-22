@@ -6,9 +6,9 @@ const upload = require('../middleware/upload');
 const router = express.Router();
 
 router.use(checkAuth)
-router.post('/', upload.single('image') , createProduct);
-router.get('/allproduct',getAllProducts)
-router.patch('/updateproduct/:id' , upload.single('image') , updateProduct )
-router.delete('/deleteproduct/:id',deleteProduct)
+router.post('/rest/', upload.single('image') , createProduct);
+router.get('/rest/allproduct',getAllProducts)
+router.patch('/rest/updateproduct/:id' , upload.single('image') , updateProduct )
+router.delete('/rest/deleteproduct/:id',deleteProduct)
 
 module.exports = router;

@@ -5,7 +5,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser');
 
 const authRouter = require('./routes/authRoutes')
-const productRouter = require('./routes/productRoutes');
+const productRouter = require('./routes/productsRouter');
 const saleRouter = require('./routes/saleRoutes')
 const dashboardRouter = require('./routes/dashboardRoutes');
 
