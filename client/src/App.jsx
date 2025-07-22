@@ -13,7 +13,7 @@ import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { loadUserFromStorage } from './features/auth/authSlice'
 import ForgotPassword from './pages/ForgotPassword'
-import UpdateProfile from './pages/updateProfile'
+import UpdateProfile from './pages/UpdateProfile'
 
 function App() {
 
