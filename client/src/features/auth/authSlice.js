@@ -8,7 +8,7 @@ import {
   verifyOtpAPI,
 } from "../../services/authApi";
 
-const API = 'http://localhost:5000/api/admin';
+const API = `${import.meta.env.VITE_API_URL}/admin`;
 
 // === ASYNC THUNKS ===
 
