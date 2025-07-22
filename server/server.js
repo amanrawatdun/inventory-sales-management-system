@@ -16,7 +16,10 @@ connectDB();
 const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: 'https://inventory-frontend-xyz.onrender.com', 
+  credentials: true
+}));
 app.use(express.json());
 app.use('/uploads' , express.static('uploads'));
 
